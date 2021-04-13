@@ -240,10 +240,11 @@ public class MatisseActivity extends AppCompatActivity implements
 
             new SingleMediaScanner(this.getApplicationContext(), path, new SingleMediaScanner.ScanListener() {
                 @Override public void onScanFinish() {
-                    Log.i("SingleMediaScanner", "scan finish!");
+                    onAlbumLoad(mAlbumsAdapter.getCursor());
                 }
             });
-            finish();
+//            finish();
+
         }
     }
 
